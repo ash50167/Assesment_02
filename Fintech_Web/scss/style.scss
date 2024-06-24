@@ -1,0 +1,140 @@
+@import "./fonts";
+@import "./mixin";
+@import "./variables";
+@import "./reset.scss";
+@import "./components.scss";
+@import "./header";
+@import './footer';
+@import "./home.scss";
+@import "./about.scss";
+@import "./service.scss";
+@import "./contact.scss";
+
+
+html,
+body {
+    height: 100%;
+    min-height: 100%;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: $default-font;
+    font-size: 18px;
+    line-height: 29px;
+    font-weight: 400;
+    position: relative;
+
+    @media screen and (max-width: 768px) {
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: 400;
+    }
+}
+
+.main-body {
+    margin: 0 !important;
+    width: 100%;
+    min-height: 100%;
+
+    @media screen and (max-width: 420px) {
+        background: $white-ff;
+        height: auto;
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: $default-font;
+    font-weight: 500;
+}
+
+a {
+    color: $black-00;
+    text-decoration: none;
+    outline: 0;
+
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+.btn.focus,
+.btn:focus {
+    outline: 0;
+    box-shadow: none;
+}
+
+input:focus {
+    outline: 0;
+    box-shadow: none;
+}
+
+strong {
+    font-weight: bold;
+}
+
+textarea {
+    resize: none;
+}
+
+input {
+    outline: none;
+}
+
+/*container sizing as per need*/
+.main-container {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    position: relative;
+    background: $white-ff;
+}
+
+.lg-container {
+    max-width: 1280px;
+    width: 100%;
+    position: relative;
+    margin: 0 auto;
+    @media screen and (max-width: 1600px) {
+        width: 100%;
+    }
+
+    @media screen and (max-width: 768px) {
+        width: 100%;
+        padding: 0px 16px;
+    }
+}
+
+.md-container {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+
+    @media screen and (max-width: 1600px) {
+        width: 100%;
+    }
+
+    @media screen and (max-width: 768px) {
+        width: 100%;
+        padding: 0px 16px;
+    }
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.mg-0 {
+    margin: 0 !important;
+}
+
+.pd-0 {
+    padding: 0 !important;
+}

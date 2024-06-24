@@ -1,0 +1,261 @@
+footer {
+    background-color: $blue-1f;
+    padding: 40px 85px;
+    @media only screen and (min-width: 1025px) and (max-width: 1440px) {
+      padding: 20px 30px;
+    }
+    @media only screen and (min-width: 769px) and (max-width: 1024px) {
+      padding: 18px 16px;
+    }
+    @media screen and (max-width: 768px) {
+      padding: 24px 0px;
+    }
+    .logo-wrap {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 0 12px 0;
+      border-bottom: 1px solid $black-33;
+      @media screen and (max-width:768px) {
+        display: block;
+      }
+      .footer-logo {
+        display: flex;
+        gap: 50px;
+        @media screen and (max-width:768px) {
+          justify-content: space-between;
+          gap: 0;
+        }
+        h2 {
+          font-size: 24px;
+          font-weight: 700;
+          color: $white-ff;
+          margin: 0; 
+        }
+        .lang-list{
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 17px;
+          margin-left: 30px;
+          .list-item{
+            margin: 0;
+             .list-link {
+              font-weight: 400;
+              font-size: 14px;
+              line-height: 14px;
+              color: $grey-a4;
+              position: relative;
+              &::after {
+                content: "";
+                width: 1px;
+                height: 100%;
+                background-color: $grey-a4;
+                position: absolute;
+                top: 0;
+                left: calc(100% + 8px);
+            }
+            &.active{
+              color: $blue-e3;
+            }
+           }
+           &:last-child{
+            .list-link{
+              &::after{
+                display: none;
+              }
+            }
+           }
+         }
+       }
+      }
+    }
+    .social-media {
+      @media screen and (max-width: 768px) {
+        display: none;
+      }
+      ul {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        li {
+          margin-left: 25px;
+          a {
+            img {
+              width: 24px;
+              height: auto;
+            }
+          }
+        }
+      }
+      &.responsive-media {
+        display: none;
+        @media screen and (max-width: 768px) {
+          display: block;
+          padding: 24px 0;
+        }
+        ul {
+          justify-content: center;
+        }
+      }
+    }
+    .footer-listing {
+      width: 100%;
+      margin-top: 10px;
+      @media screen and (max-width: 1140px) {
+        .col-sm-12 {
+          max-width: 100%;
+          flex: 0 0 100%;
+        }
+      }
+      .listing {
+        padding-left: 12px;
+        @media screen and (max-width: 1140px) {
+          .col-sm-12 {
+            max-width: 33.33%;
+            flex: 0 0 33.33%;
+          }
+        }
+        @media screen and (max-width: 640px) {
+          .col-sm-12 {
+            max-width: 100%;
+            flex: 0 0 100%;
+          }
+        }
+        ul {
+          li {
+            font-size: 14px;
+            line-height: 21px;
+            font-weight: 300;
+            color: $white-ff;
+            margin-top: 15px;
+            display: flex;
+            justify-content: flex-start;
+            transition: 0.5s;
+            font-family: $default-font;
+            text-transform: capitalize;
+            cursor: pointer;
+            img {
+              display: none;
+              margin-left: 13px;
+            }
+            a{
+              font-size: 14px;
+              line-height: 21px;
+              font-weight: 300;
+              color: $white-ff;
+              transition: 0.5s;
+              position: relative;
+              &::after{
+                content: '';
+                position: absolute;
+                top: 5px;
+                right: 0px;
+                width: 6px;
+                height: 11px;
+                background: url('../../assets/icons/right-arrow.svg');
+                opacity: 0;
+                transition: 0.5s;
+              }
+            }
+            &:hover {
+              color: $green-89;
+              transform: translateX(15px);
+              transition: 0.5s;
+              img {
+                display: block;
+              }
+              &::after{
+                right: -20px;
+                opacity: 1;
+                transition: 0.5s;
+              }
+            }
+            @media screen and (max-width: 768px) {
+              font-size: 14px;
+              line-height: 19px;
+              font-weight: 400;
+              margin-left: 0;
+            }
+          }
+        }
+      }
+        .country {
+          margin-top: 15px;
+          @media screen and (max-width: 768px) {
+            margin-top: 24px;
+          }
+          h3 {
+            font-size: 18px;
+            line-height: 24px;
+            font-weight: 400;
+            color: $white-ff;
+            font-family: $default-font;
+            @media screen and (max-width: 768px) {
+              font-size: 18px;
+              line-height: 24px;
+              font-weight: 500;
+              margin-left: 0;
+              padding-bottom: 0px;
+            }
+          }
+          ul {
+            margin-top: 15px;
+            li {
+              display: flex;
+              align-items: flex-start;
+              padding-top: 15px;
+              font-family: $heading-font;
+              &:first-child {
+                padding-top: 0;
+              }
+              span {
+                width: 24px;
+              }
+              p {
+                width: calc(100% - 24px);
+                // display: flex;
+                // justify-content: flex-start;
+                // align-items: flex-start;
+                
+                font-size: 14px;
+                line-height: 21px;
+                font-weight: 300;
+                color: $white-ff;
+                padding-left: 11px;
+                font-family: $default-font;
+                @media screen and (max-width: 768px) {
+                  font-size: 14px;
+                  line-height: 21px;
+                  font-weight: 300;
+                  margin-left: 0;
+                }
+              }
+            }
+          }
+        } 
+    }
+    .copyright {
+      padding-top: 15px;
+      border-top: 1px solid $black-33;
+      text-align: center;
+      margin-top: 10px;
+      @media screen and (max-width: 768px) {
+        margin-top: 0;
+      }
+      p {
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 21px;
+        color: $grey-66;
+        font-family: $default-font;
+        @media screen and (max-width: 768px) {
+          font-size: 12px;
+          line-height: 15px;
+          font-weight: 400;
+        }
+      }
+    }
+  }
+  
